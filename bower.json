@@ -3,6 +3,7 @@
   "authors": [
     "kapopken <kapopken@gmail.com>"
   ],
+  "version": "1.0.0",
   "description": "Adds ability to send exceptions and logging to the server",
   "main": "dist/shadowLogger.min.js",
   "moduleType": [],
