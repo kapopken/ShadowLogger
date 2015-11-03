@@ -17,7 +17,7 @@ app.config(config);
 }
 ```
 ##USAGE
-  just use $log.  It will interecept all the calls.  Do the normal angular log and then log to the server depending on your options set.
+  Use the built in angular $log provider.  The shadow logger will intercept all calls after the log and send them to the server.  
   $log.warn, $log.info, $log.error,$log.debug
   
 ## OPTIONS
@@ -31,11 +31,14 @@ app.config(config);
         debug:5
   };
   var options = {
-          traceLevel:5,   --maximum trace level to log to server  IE if you want to log errors and warnings set this to 2;
+          traceLevel:5,   --maximum trace level to log to server  IE if you want to log errors and warnings only set this to 2;
           additionalData:{ --add whatever you need.  these will be appended to the data that will be sent to the server
             machineName:''
           },
-          ajaxOptions:{  --normal ajax options  url is required
+          ajaxOptions:{  
+            URL:'example/url',  --required
+            type:'POST',
+            contentType:'application/json'
             
           }
     };
