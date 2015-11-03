@@ -2,21 +2,23 @@
 This minimally invasive provider allows for all exceptions and log messages to easily be sent to a server with minimul configuration.
 When angular catches an uncaught exception this will be logged as well to the server.
 
-## Adding the module
+##INSTALL
+	bower install shadowLogger
 	var app = angular.module('app',['shadowLogger']);
 
-## Configure
+
+##CONFIGURE
 app.config(config);
 	app.$inject = 'shadowLoggerProvider';
 	function config(shadowLoggerProvider){
 		
 		shadowLoggerProvider.setOptions(options);
 }
-##usage
+##USAGE
   just use $log.  It will interecept all the calls.  Do the normal angular log and then log to the server depending on your options set.
   $log.warn, $log.info, $log.error,$log.debug
   
-## API
+## OPTIONS
   available options;
     var traceLevels = {
         error:1,
