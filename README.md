@@ -8,18 +8,21 @@ When angular catches an uncaught exception this will be logged as well to the se
 
 
 ##CONFIGURE
+```
 app.config(config);
 	app.$inject = 'shadowLoggerProvider';
 	function config(shadowLoggerProvider){
 		
 		shadowLoggerProvider.setOptions(options);
 }
+```
 ##USAGE
   just use $log.  It will interecept all the calls.  Do the normal angular log and then log to the server depending on your options set.
   $log.warn, $log.info, $log.error,$log.debug
   
 ## OPTIONS
   available options;
+  ```
     var traceLevels = {
         error:1,
         warn:2,
@@ -36,5 +39,6 @@ app.config(config);
             
           }
     };
+    ```
 	
  
