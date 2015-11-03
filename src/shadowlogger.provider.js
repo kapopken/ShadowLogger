@@ -68,9 +68,9 @@
     }
     function logToServer(message,traceLevel){
       var ajaxOptions = {
-            type:'POST'
-            ,data:JSON.stringify(options.formatMessage(message,traceLevel))
-            ,contentType:'application/json'
+            type:'POST',
+            data:JSON.stringify(options.formatMessage(message,traceLevel)),
+            contentType:'application/json'
         };
       ajaxOptions = $.extend(ajaxOptions,options.ajaxOptions,true);
       $.ajax(ajaxOptions);
