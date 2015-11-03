@@ -3,8 +3,6 @@
   "eqeqeq"  : true,
   "undef"   : true,
   "jquery"  : true,
-
-  // global variables
   "globals": {
     "angular"   : false,
     "jasmine"   : false,

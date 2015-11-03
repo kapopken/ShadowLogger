@@ -1,6 +1,6 @@
 (function(){
-	"use strict"
-	var app = angular.module('shadowLoggerExample',["shadowLogger"]);
+	'use strict';
+	var app = angular.module('shadowLoggerExample',['shadowLogger']);
 	app.config(config);
 	app.$inject = 'shadowLoggerProvider';
 	function config(shadowLoggerProvider){

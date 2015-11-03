@@ -1,11 +1,13 @@
 var 
-    gulp = require("gulp"),
-    config = require("./config.js"),
+    gulp = require('gulp'),
+    config = require('./config.js'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish');
-gulp.task('lint', function () {
+gulp.task('lint', lint);
 
-   return  gulp.src(config.sourceFolder + "/" + config.globs.js)
+function lint(){
+    return  gulp.src(config.sourceFolder + '/' + config.globs.js)
           .pipe(jshint())
           .pipe(jshint.reporter(stylish));
-});
+    
+}

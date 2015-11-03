@@ -51,12 +51,12 @@
         }
     };
     function formatMessage(message,traceLevel){
-      var formatMessage =  {
+      var messageFormat =  {
         message:message,
         traceLevel:traceLevel
-      } 
-      formatMessage = $.extend(formatMessage,options.additionalData,true);
-      return formatMessage;
+      };
+      messageFormat = $.extend(messageFormat,options.additionalData,true);
+      return messageFormat;
     }
     function log(message,traceLevel){
       if(traceLevel > options.traceLevel)

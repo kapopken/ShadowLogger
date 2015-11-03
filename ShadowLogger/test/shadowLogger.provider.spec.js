@@ -1,6 +1,6 @@
 describe('shadowLogger',function(){
     var shadowLogger;
-    var ajax ={url:"test/log"};
+    var ajax ={url:'test/log'};
     beforeEach(module('kpShadowLogger'));
         
   
@@ -17,24 +17,24 @@ describe('shadowLogger',function(){
         }));
   
         it('warning to server', inject(function() {
-            spyOn($, "ajax");
-            shadowLogger.warn("warning");
-            expect($.ajax.calls.mostRecent().args[0]["url"]).toEqual(ajax.url);
+            spyOn($, 'ajax');
+            shadowLogger.warn('warning');
+            expect($.ajax.calls.mostRecent().args[0].url).toEqual(ajax.url);
         }));
         it('info to server', inject(function() {
-            spyOn($, "ajax");
-            shadowLogger.info("info");
-            expect($.ajax.calls.mostRecent().args[0]["url"]).toEqual(ajax.url);
+            spyOn($, 'ajax');
+            shadowLogger.info('info');
+            expect($.ajax.calls.mostRecent().args[0].url).toEqual(ajax.url);
         }));
         it('debug to server', inject(function() {
-            spyOn($, "ajax");
-            shadowLogger.debug("debug");
-            expect($.ajax.calls.mostRecent().args[0]["url"]).toEqual(ajax.url);
+            spyOn($, 'ajax');
+            shadowLogger.debug('debug');
+            expect($.ajax.calls.mostRecent().args[0].url).toEqual(ajax.url);
         }));
             it('exception to server', inject(function() {
-            spyOn($, "ajax");
-            shadowLogger.error("exception","exception");
-            expect($.ajax.calls.mostRecent().args[0]["url"]).toEqual(ajax.url);
+            spyOn($, 'ajax');
+            shadowLogger.error('exception','exception');
+            expect($.ajax.calls.mostRecent().args[0].url).toEqual(ajax.url);
         }));
     });
      describe('With TraceLevel set',function(){
@@ -48,15 +48,15 @@ describe('shadowLogger',function(){
              shadowLogger = _shadowLogger_;
         }));
          it('should not log info to server', inject(function() {
-            spyOn($, "ajax");
-            shadowLogger.info("info");
+            spyOn($, 'ajax');
+            shadowLogger.info('info');
             
             expect($.ajax).not.toBe();
         }));
             it('should log error  to server', inject(function() {
-             spyOn($, "ajax");
-            shadowLogger.error("exception","exception");
-            expect($.ajax.calls.mostRecent().args[0]["url"]).toEqual(ajax.url);
+             spyOn($, 'ajax');
+            shadowLogger.error('exception','exception');
+            expect($.ajax.calls.mostRecent().args[0].url).toEqual(ajax.url);
         }));
      });
     

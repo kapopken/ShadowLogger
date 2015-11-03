@@ -1,25 +1,24 @@
 (function(){
-		"use strict"
+	'use strict';
 	var controller = angular.module('shadowLoggerExample').controller('exampleController',exampleController);
 	controller.$inject =['$log'];
 	function exampleController($log){
 		this.log = log;
-		this.radioGroup = "";
+		this.radioGroup = '';
 		function log(){
 			switch(this.radioGroup){
-				case "log":
+				case 'log':
 					$log.log('blah');
 					break;
-				case "debug":
+				case 'debug':
 					$log.debug('debug');
 					break;
-				case "warn":
+				case 'warn':
 					$log.warn('warn');
 					break;
-				case "info":
-					$log.info("info");
+				case 'info':
+					$log.info('info');
 			}
 		}
-	};
-	
+	}
 })();
