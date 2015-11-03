@@ -8,9 +8,12 @@ var
  
 function build(){
     return  gulp.src(config.sourceFolder + '/' + config.globs.js)
+       
           .pipe(sourcemaps.init())
+           .pipe(concat(config.distUnminifiedFileName))
+           .pipe(gulp.dest(config.distFilder))
           .pipe(uglify())
-          .pipe(concat(config.distFileName))
+
            .pipe(sourcemaps.write())
           .pipe(gulp.dest(config.distFilder));
 }

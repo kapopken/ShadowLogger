@@ -4,7 +4,7 @@ When angular catches an uncaught exception this will be logged as well to the se
 
 ##INSTALL
 	bower install shadowLogger
-	var app = angular.module('app',['kpShadowLogger']);
+	var app = angular.module('app',['shadowLogger']);
 
 
 ##CONFIGURE

@@ -4,6 +4,7 @@ var config = {
 	distFilder:'./dist',
 	exampleFolder:'./example',
 	distFileName:'shadowLogger.min.js',
+	distUnminifiedFileName:'shadowLogger.js',
 	globs:{
 		js:'**/*.js',
 		test:'**/*.spec.js',

@@ -5,7 +5,7 @@
   ],
   "version": "1.0.3",
   "description": "Adds ability to send exceptions and logging to the server",
-  "main": "dist/shadowLogger.min.js",
+  "main": "dist/shadowLogger.js",
   "moduleType": [],
   "keywords": [
     "Angular",
