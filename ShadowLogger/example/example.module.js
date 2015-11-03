@@ -5,6 +5,6 @@
 	app.$inject = 'shadowLoggerProvider';
 	function config(shadowLoggerProvider){
 		
-		shadowLoggerProvider.setOptions({logAlert:true});
+		//shadowLoggerProvider.setOptions();
 	}
 })();

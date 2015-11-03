@@ -5,7 +5,6 @@
     app.provider("shadowLogger",shadowLoggerProvider);            
     var options = {
           loggingUrl:'',
-          logAlert:false,
           traceLevel:5,
           additionalData:{
             machineName:''
@@ -61,15 +60,6 @@
     function log(message,traceLevel){
       if(traceLevel > options.traceLevel)
         return;
-      if(options.logAlert){
-        alert(message);
-      }
-      else if(console){
-        console.log(message);
-      }
-      else{
-          alert(message);
-      }
       if(options.ajaxOptions.url){
         logToServer(message,traceLevel);
       }
