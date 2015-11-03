@@ -5,6 +5,18 @@
 	app.$inject = 'shadowLoggerProvider';
 	function config(shadowLoggerProvider){
 		
-		//shadowLoggerProvider.setOptions();
+		shadowLoggerProvider.setOptions({
+				 ajaxOptions: {
+                     url:""
+                },
+			 additionalData: {
+                    ApplicationName: '',
+                    MachineName:"",
+                    UserName: "",
+                    Category: 'Client',
+                    ExceptionType: 0,
+                    SessionId:0
+                }
+		});
 	}
 })();

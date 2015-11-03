@@ -1,6 +1,6 @@
 (function(){
   "use strict";
-	 var app = angular.module('kpShadowLogger');
+	 var app = angular.module('shadowLogger');
   
     app.provider("shadowLogger",shadowLoggerProvider);            
     var options = {
@@ -12,6 +12,14 @@
           },
           ajaxOptions:{}
     };
+    function formatMessage(message,traceLevel){
+      var messageFormat =  {
+        MessageText:message,
+        traceLevel:traceLevel
+      };
+      messageFormat = $.extend(messageFormat,options.additionalData,true);
+      return messageFormat;
+    }
     function shadowLoggerProvider() {
        
       return {
@@ -50,14 +58,7 @@
           log(message,traceLevels.debug); 
         }
     };
-    function formatMessage(message,traceLevel){
-      var messageFormat =  {
-        MessageText:message,
-        traceLevel:traceLevel
-      };
-      messageFormat = $.extend(messageFormat,options.additionalData,true);
-      return messageFormat;
-    }
+
     function log(message,traceLevel){
       if(traceLevel > options.traceLevel)
         return;

@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    var app = angular.module('kpShadowLogger', []);
+    var app = angular.module('shadowLogger', []);
     app.config(config);
     config.$inject = ['$provide'];
 	function config($provide){
