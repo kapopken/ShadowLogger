@@ -4,53 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <!-- inject:css -->
-  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
   <!-- endinject -->
 </head>
 <body ng-app="shadowLoggerExample">
     <div class="container body-content" ng-controller="exampleController as vm">
-      Copy
-  <form class="form-horizontal">
-  <div class="form-group">
-     <div class="col-sm-offset-2 col-sm-10">
-      <div class="radio">
+      <label>
+            <input type="radio"   id="chkLog" name="logType"  value="log" ng-model="vm.radioGroup"/> Log
+        </label>
+         <div class="radio">
         <label>
-            <input type="radio" class="form-control"  id="chkLog" name="logType"  value="log" ng-model="vm.radioGroup"/> Log
+            <input type="radio"  id="chkLog" name="logType"  value="warn" ng-model="vm.radioGroup"/> Warn
+        </label>
+          <label>
+            <input type="radio"  id="chkLog" name="logType"  value="info" ng-model="vm.radioGroup"/> info
+        </label>
+         <label>
+            <input type="radio" " id="chkLog" name="logType"  value="debug" ng-model="vm.radioGroup"/> Debug
         </label>
       </div>
+      
+     <button ng-click="vm.log()" >log</button>
     </div>
-      <div class="col-sm-offset-2 col-sm-10">
-      <div class="radio">
-        <label>
-            <input type="radio" class="form-control" id="chkLog" name="logType"  value="warn" ng-model="vm.radioGroup"/> Warn
-        </label>
-      </div>
-    </div>
-       <div class="col-sm-offset-2 col-sm-10">
-      <div class="radio">
-        <label>
-            <input type="radio" class="form-control" id="chkLog" name="logType"  value="info" ng-model="vm.radioGroup"/> info
-        </label>
-      </div>
-    </div>
-           <div class="col-sm-offset-2 col-sm-10">
-      <div class="radio">
-        <label>
-            <input type="radio" class="form-control" id="chkLog" name="logType"  value="debug" ng-model="vm.radioGroup"/> Debug
-        </label>
-      </div>
-    </div>
-  </div>
-  <button ng-click="vm.log()" class="btn btn-primary" >log</button>
+
  
     </div>
      <!-- inject:js -->
   <script src="../bower_components/angular/angular.js"></script>
   <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../src/shadowLogger.module.js"></script>
   <script src="example.module.js"></script>
-  <script src="../dist/shadowlogger.min.js"></script>
-  
+  <script src="../src/shadowlogger.provider.js"></script>
   <script src="example.controller.js"></script>
   <!-- endinject -->
 

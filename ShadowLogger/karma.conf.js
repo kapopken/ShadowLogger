@@ -15,7 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/**/*.js',
+      'bower_components/angular/angular.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/jquery/dist/jquery.js',
+      'src/shadowLogger.module.js',
+      'src/shadowlogger.provider.js',
       'test/**/*.js'
     ],
 
@@ -56,7 +60,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'PhantomJS'],
+    browsers: [ 'PhantomJS'],
 
 
     // Continuous Integration mode

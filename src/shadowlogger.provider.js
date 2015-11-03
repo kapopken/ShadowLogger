@@ -1,17 +1,20 @@
 (function(){
   "use strict";
-	 var app = angular.module('kpShadowLogger');
+	 var app = angular.module('shadowLogger');
   
     app.provider("shadowLogger",shadowLoggerProvider);            
     var options = {
-          loggingUrl:'',
           logAlert:false,
           traceLevel:5,
           additionalData:{
             machineName:''
           },
           ajaxOptions:{}
-    };
+    },
+    ajaxOptions = {
+          type:'POST'
+          ,contentType:'application/json'
+      };
     function shadowLoggerProvider() {
        
       return {
@@ -71,14 +74,11 @@
           alert(message);
       }
       if(options.ajaxOptions.url){
-        logToServer(message,traceLevel);
+        
       }
     }
     function logToServer(message,traceLevel){
-      var ajaxOptions = {type:'POST',
-            url:JSON.stringify(formatMessage(message,traceLevel))
-            ,contentType:'application/json'
-        };
+      ajaxOptions.data = formatMessage(message,traceLevel);
       ajaxOptions = $.extend(ajaxOptions,options.ajaxOptions,true);
       $.ajax(ajaxOptions);
     }

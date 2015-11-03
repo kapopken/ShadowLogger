@@ -23,6 +23,7 @@
     "jslint": "^0.9.3",
     "karma": "^0.13.14",
     "main-bower-files": "^2.9.0",
+    "phantomjs": "^1.9.18",
     "require-dir": "^0.3.0",
     "stream-series": "^0.1.1"
   }
