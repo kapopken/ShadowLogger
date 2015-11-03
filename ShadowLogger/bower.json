@@ -4,12 +4,13 @@
     "kapopken <kapopken@gmail.com>"
   ],
   "description": "Adds ability to send exceptions and logging to the server",
-  "main": "",
+  "main": "dist/shadowLogger.min.js",
   "moduleType": [],
   "keywords": [
     "Angular",
     "Logging",
-    "Exceptions"
+    "Exceptions",
+    "Server"
   ],
   "license": "MIT",
   "homepage": "",
