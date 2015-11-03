@@ -6,6 +6,7 @@
     var options = {
           loggingUrl:'',
           traceLevel:5,
+          formatMessage:formatMessage,
           additionalData:{
             machineName:''
           },
@@ -51,7 +52,7 @@
     };
     function formatMessage(message,traceLevel){
       var messageFormat =  {
-        message:message,
+        MessageText:message,
         traceLevel:traceLevel
       };
       messageFormat = $.extend(messageFormat,options.additionalData,true);
@@ -65,8 +66,9 @@
       }
     }
     function logToServer(message,traceLevel){
-      var ajaxOptions = {type:'POST',
-            url:JSON.stringify(formatMessage(message,traceLevel))
+      var ajaxOptions = {
+            type:'POST'
+            ,data:JSON.stringify(options.formatMessage(message,traceLevel))
             ,contentType:'application/json'
         };
       ajaxOptions = $.extend(ajaxOptions,options.ajaxOptions,true);
