@@ -1,6 +1,6 @@
 {
-  "name": "ShadowLogger",
-  "version": "1.0.0",
+  "name": "shadowLogger",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "directories": {
