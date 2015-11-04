@@ -3,7 +3,7 @@
   "authors": [
     "kapopken <kapopken@gmail.com>"
   ],
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Adds ability to send exceptions and logging to the server",
   "main": "dist/shadowLogger.js",
   "moduleType": [],
@@ -18,7 +18,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components", 
+    "bower_components",
     "test",
     "tests",
     "example"
